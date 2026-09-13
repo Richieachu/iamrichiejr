@@ -20,7 +20,7 @@ export default function Home() {
     tiktok: "https://www.tiktok.com/@iamrichiejr",
     x: "https://x.com/iamrichiejr?s=21",
     whatsapp:
-      "https:///2348121193461?text=Hi%20Richie%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you.",
+      "https://wa.me/2348121193461?text=Hi%20Richie%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you.",
   };
 
   // ====== VIDEO PORTFOLIO (5 VIMEO VIDEOS) ======
@@ -61,7 +61,11 @@ export default function Home() {
   );
 
   // ====== REVIEWS ======
-  const reviews = useMemo(() => [], []);
+  const reviews: {
+    quote: string;
+    name: string;
+    title: string;
+  }[] = [];
 
   // ====== WORKFLOW ======
   const workflowItems = useMemo(
@@ -203,7 +207,7 @@ Two rounds of revisions are included in my rates.`,
                   fill="currentColor"
                 >
                   <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z" />
-                  <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                  <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-6z" />
                   <path d="M17.25 6.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
                 </svg>
               }
@@ -336,12 +340,10 @@ Two rounds of revisions are included in my rates.`,
                   )}
                 </div>
 
-                <div className="flex items-center justify-between px-5 py-4">
+                <div className="px-5 py-4">
                   <p className="text-sm font-semibold text-neutral-200">
                     {v.title}
                   </p>
-
-                 
                 </div>
               </div>
             ))}
@@ -375,10 +377,15 @@ Two rounds of revisions are included in my rates.`,
                 I’m Richie Jr, a Video editor and Creative storyteller.
                 <br />
                 <br />
-                I specialize in creating high quality, engaging content for social media platforms like youtube, Instagram and Tiktok. I have a keen eye for detail and passion for storytelling and i am dedicated to helping creators bring their vision to life.
+                I specialize in creating high quality, engaging content for
+                social media platforms like youtube, Instagram and Tiktok. I
+                have a keen eye for detail and passion for storytelling and i
+                am dedicated to helping creators bring their vision to life.
                 <br />
                 <br />
-                I am always looking for new ways to make every edit feel intentional while keeping the personality of the person or brand at the center.
+                I am always looking for new ways to make every edit feel
+                intentional while keeping the personality of the person or
+                brand at the center.
               </p>
 
               <div className="mt-10 border-b border-white/10">
@@ -545,7 +552,7 @@ Two rounds of revisions are included in my rates.`,
                       fill="currentColor"
                     >
                       <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z" />
-                      <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-6z" />
+                      <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-3-3z" />
                       <path d="M17.25 6.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
                     </svg>
                   }
